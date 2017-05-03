@@ -6,11 +6,13 @@ var Sandwich= (function(veg){
   	if(vegChooser.value === "lettuce"){
   		return Sandwich.addTopping(vegPrice.lettuce);
   	}else if(vegChooser.value === "tomato"){
-  		return Sandwich.addTopping(vegPrice.onion);
+  		return Sandwich.addTopping(vegPrice.tomato);
   	}else if(vegChooser.value === "greenpep"){
   		return Sandwich.addTopping(vegPrice.greenpep);
-  	}
+  	}else if(vegChooser.value === "onion"){
+      return Sandwich.addTopping(vegPrice.onion);
+    }
   }
 
   return veg;
-});
+})(Sandwich || {});

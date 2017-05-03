@@ -1,9 +1,12 @@
 # Sandwich Maker exercise
 
-*Frist upload NOT COMPLETE. and i have the basic layout of it complete but now I'm getting errors with the iife functions*
-
+*App works*
+---
 ### Instructions
-^Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a Sandwich module, then create the following as individual modules, using IIFE syntax, to augment Sandwich:
+1. select meat/cheese/vegies/condiments/bread to make a sandwich
+2. the total price for the sandwich accumulates at the bottom as you fill it out.
+---
+> Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a Sandwich module, then create the following as individual modules, using IIFE syntax, to augment Sandwich:
 
 bread
 meat

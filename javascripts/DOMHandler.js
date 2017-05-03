@@ -4,7 +4,6 @@ var finalSandwichPrice = 0;
 
 // Variable to hold topping that the user selects
 var selectedTopping;
-
 var meatChooser = document.getElementById("meat-chooser");
 var cheeseChooser= document.getElementById('cheese-chooser');
 var condimentChooser= document.getElementById('Condiment-chooser');
@@ -14,7 +13,8 @@ var price= document.getElementById('finalPrice');
 
 meatChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
-  Sandwich.newMeat(selectedTopping);
+  console.log(selectedTopping);
+  Sandwich.newMeat(selectedTopping, extraMeat);
 
 });
 breadChooser.addEventListener("change", function(event) {
@@ -36,9 +36,5 @@ cheeseChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
   Sandwich.newCheese(selectedTopping);
 });
-
-
-
-
 
 
