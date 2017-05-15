@@ -1,17 +1,17 @@
-console.log('condiment has loaded');
-var Sandwich= (function(cond){
+"use strict";
+  let sandwichSquared= require("./sandwich");
+var condimentChooser= document.getElementById('Condiment-chooser');
 	var condPrice={"mayo":0.00,"mustard":0.00,"ranch":0.00,"honeymustard":0.00,};
-	cond.newCond= function(event){
+	let newCond= function(event){
 		if(condimentChooser.value === "mayo"){
-			return Sandwich.addTopping(condPrice.mayo);
+			  sandwichSquared.addTopping(condPrice.mayo);
 		}else if(condimentChooser.value === "mustard"){
-			return Sandwich.addTopping(condPrice.mustard);
+			  sandwichSquared.addTopping(condPrice.mustard);
 		}else if(condimentChooser.value === "ranch"){
-			return Sandwich.addTopping(condPrice.ranch);
+			  sandwichSquared.addTopping(condPrice.ranch);
 		}else if(condimentChooser.value === "honeymustard"){
-			return Sandwich.addTopping(condPrice.honeymustard);
+			  sandwichSquared.addTopping(condPrice.honeymustard);
 		}
-	}
+	};
 
-	return cond;
-})(Sandwich || {});
+module.exports= {newCond};

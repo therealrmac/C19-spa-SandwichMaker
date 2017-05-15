@@ -1,18 +1,18 @@
-console.log('bread has loaded');
-var Sandwich= (function(bread){
+"use strict";
+  let sandwichSquared= require("./sandwich");
+var breadChooser= document.getElementById('bread-chooser');
+
 	 var breadPrice={"white": 1.00, "wheat": 1.20,"itallian":1.60,"flatbread": 1.80};
-
-	 bread.newBread= function(event){
+	 let newBread= function(event){
 	 	if(breadChooser.value=== "white"){
-	 		return Sandwich.addTopping(breadPrice.white);
+	 		 sandwichSquared.addTopping(breadPrice.white);
 	 	}else if(breadChooser.value === "wheat"){
-	 		return Sandwich.addTopping(breadPrice.wheat);
+	 		 sandwichSquared.addTopping(breadPrice.wheat);
 	 	}else if(breadChooser.value === "itallian"){
-	 		return Sandwich.addTopping(breadPrice.wheat);
+	 		 sandwichSquared.addTopping(breadPrice.wheat);
 	 	}else if(breadChooser.value === "flatbread"){
-	 		return Sandwich.addTopping(breadPrice.flatbread);
+	 		 sandwichSquared.addTopping(breadPrice.flatbread);
 	 	}
-	 }
-	 return bread;
+	 };
 
-})(Sandwich || {});
+module.exports= {newBread};
