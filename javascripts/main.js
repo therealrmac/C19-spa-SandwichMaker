@@ -16,13 +16,12 @@ let sandwichCheese= require("./cheese");
 let sandwichCond= require("./cond");
 let sandwichVeg= require("./veg");
 let sandwichBread= require("./bread");
-let sandwichSquared= require("./sandwich");
+
 
 meatChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
   console.log(selectedTopping);
   sandwichMeat.newMeat(selectedTopping);
-
 });
 breadChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
