@@ -1,15 +1,11 @@
-console.log('sandwich.js has loaded');
-
-var Sandwich= (function(maker){
+"use strict";
 // This SandwichMaker IIFE augments the original one
   var totalPrice=0;
+var price= document.getElementById('finalPrice');
 
-	return{ 
-      addTopping: function(total){
+     let addTopping= function(total){
         totalPrice+= total;
         price.innerHTML= "Total Price: " +totalPrice.toFixed(2);
-      }
-};
+      };
 
-return maker;
-})(Sandwich || {});
+module.exports= {addTopping};

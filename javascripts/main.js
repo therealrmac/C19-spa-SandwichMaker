@@ -1,4 +1,5 @@
-console.log("DOMHandler.js had loaded");
+"use strict";
+console.log("main.js had loaded");
 // Variable to hold the final price. Default to 0.
 var finalSandwichPrice = 0;
 
@@ -10,31 +11,37 @@ var condimentChooser= document.getElementById('Condiment-chooser');
 var vegChooser= document.getElementById('veg-chooser');
 var breadChooser= document.getElementById('bread-chooser');
 var price= document.getElementById('finalPrice');
+let sandwichMeat= require("./meat");
+let sandwichCheese= require("./cheese");
+let sandwichCond= require("./cond");
+let sandwichVeg= require("./veg");
+let sandwichBread= require("./bread");
+let sandwichSquared= require("./sandwich");
 
 meatChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
   console.log(selectedTopping);
-  Sandwich.newMeat(selectedTopping, extraMeat);
+  sandwichMeat.newMeat(selectedTopping);
 
 });
 breadChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
-  Sandwich.newBread(selectedTopping);
+sandwichBread.newBread(selectedTopping);
 });
 vegChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
-  Sandwich.newVeg(selectedTopping);
+ sandwichVeg.newVeg(selectedTopping);
 
 });
 condimentChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
-  Sandwich.newCond(selectedTopping);
+  sandwichCond.newCond(selectedTopping);
 
 });
 cheeseChooser.addEventListener("change", function(event) {
 
   selectedTopping = event.target.value;
-  Sandwich.newCheese(selectedTopping);
+  sandwichCheese.newCheese(selectedTopping);
 });
 
 

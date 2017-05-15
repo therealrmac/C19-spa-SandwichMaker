@@ -1,6 +1,6 @@
 # Sandwich Maker exercise
 
-*App works*
+*Version 2 with browserify*
 ---
 ### Instructions
 1. select meat/cheese/vegies/condiments/bread to make a sandwich
